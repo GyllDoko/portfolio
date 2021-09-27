@@ -65,10 +65,16 @@ const initialState = {
             url: ""
         },
 
-    ]
+    ],
+    details: {}
 }
 export const RootReducer = (state = initialState, action) => {
     switch (action.type) {
+        case "GO DETAILS":
+            return {
+                ...state,
+                details: action.payload
+            }
         default:
             return state
     }

@@ -1,8 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 export const Portefolio = (props) => {
+  const onGoDetails = (value)=>{
+    let action = {type: "GO DETAILS", payload: value}
+    props.dispatch(action)
+    props.history.push("/details")
+  }
   return (
     <section id="work" class="portfolio-mf sect-pt4 route">
       <div class="container">
@@ -40,18 +44,12 @@ export const Portefolio = (props) => {
                     </div>
                     <div class="col-sm-4">
                       <div class="w-like">
-                        <Link
-                          to={{
-                            pathname: "/details",
-                            data: item,
-                          }}
-                          onClick={()=>props.history.push({
-                            pathname: "/details",
-                            data: item,
-                          })}
+                        <a
+                        href
+                          onClick={()=> onGoDetails(item)}
                         >
                           <span class="bi bi-plus-circle"></span>
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </div>

@@ -9,7 +9,6 @@ import { Presentation } from "../components/Presentation";
 import { Service } from "../components/Service";
 
 export const Home = (props) => {
-  console.log(props);
   return (
     <>
       <Header />
