@@ -47,6 +47,7 @@ export const Portefolio = (props) => {
                         <a
                         href
                           onClick={()=> onGoDetails(item)}
+                          style={{cursor: "pointer"}}
                         >
                           <span class="bi bi-plus-circle"></span>
                         </a>
